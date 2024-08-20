@@ -11,11 +11,19 @@ list.insertAt(1, 25)
 list.removeAt(2)
 
 const poppedValue = list.pop()
+console.log(`Eliminated value: ${poppedValue}`)
 
-console.log(`Valor eliminado: ${poppedValue}`)
-
-let current = list.head
-while (current) {
-  console.log(current.value)
-  current = current.next
+function printList(head) {
+  if (!head) {
+    console.log('List is empty')
+    return
+  }
+  let current = head;
+  console.log('List:');
+  while (current) {
+    console.log(current.value)
+    current = current.next
+  }
 }
+
+printList(list.head)
