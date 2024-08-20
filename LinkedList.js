@@ -10,13 +10,11 @@ class Node {
       this.head = null
     }
   
-    // Método para insertar un nodo al inicio (prepend)
     prepend(value) {
       const newNode = new Node(value, this.head)
       this.head = newNode
     }
   
-    // Método para eliminar el último nodo (pop)
     pop() {
       if (!this.head) return null
   
@@ -36,7 +34,6 @@ class Node {
       return value
     }
   
-    // Método para eliminar un nodo en una posición específica (removeAt)
     removeAt(position) {
       if (position === 0) {
         if (this.head) {
@@ -60,7 +57,6 @@ class Node {
       }
     }
   
-    // Método para insertar un nodo en una posición específica (insertAt)
     insertAt(position, value) {
       if (position === 0) {
         this.prepend(value)
